@@ -59,7 +59,8 @@ public class DaumOauth2Controller {
 
 
     @RequestMapping("/daum_callback")
-    public String daum_callback(Model model, HttpServletRequest request, @RequestParam(required=true) String code) throws Exception {
+    public String daum_callback(Model model, HttpServletRequest request,
+                                @RequestParam(required=true) String code) throws Exception {
         System.out.println("Daum Callback is called!!");
         System.out.println(code);
 
