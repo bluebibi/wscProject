@@ -36,6 +36,10 @@ public class HomeController {
         return "hello";
     }
 
+
+
+    
+
     @RequestMapping("/requestParamTest")
     public String requestParamTest(@RequestParam(name = "a", required=false, defaultValue = "0") int a,
                                    @RequestParam("b") String b,
