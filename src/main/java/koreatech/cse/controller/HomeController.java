@@ -36,12 +36,6 @@ public class HomeController {
         return "hello";
     }
 
-    @RequestMapping("/env3")
-    public String env3(Model model) {
-        model.addAttribute("textFromController", env);
-        return "hello";
-    }
-
     @RequestMapping("/requestParamTest")
     public String requestParamTest(@RequestParam(name = "a", required=false, defaultValue = "0") int a,
                                    @RequestParam("b") String b,
