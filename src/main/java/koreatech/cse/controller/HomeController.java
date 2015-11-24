@@ -10,7 +10,6 @@ import java.util.Map;
 @Controller
 @RequestMapping("/")
 public class HomeController {
-
     @Value("${env.text}")
     private String env;
 
@@ -27,6 +26,12 @@ public class HomeController {
 
     @RequestMapping("/env")
     public String env(Model model) {
+        model.addAttribute("textFromController", env);
+        return "hello";
+    }
+
+    @RequestMapping("/env2")
+    public String env2(Model model) {
         model.addAttribute("textFromController", env);
         return "hello";
     }
